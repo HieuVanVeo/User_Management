@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: userManagement
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5433/user_management?ssl=false
+    username: hieunv
+    password: 123456
+    driverClassName: org.postgresql.Driver
+jpa:
+  default:
+    packages-to-scan:
+      - 'com.micronaut'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        enable_lazy_load_no_trans: true
